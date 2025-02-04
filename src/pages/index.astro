@@ -1,15 +1,42 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Button2 from '../components/Button2.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Titel">
 	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
+		<div class="py-8">
+			<h1 class="font-bold text-2xl">TAILWIND ØVELSER</h1>
+		<h2 class="uppercase font-semibold ">Øvelse 1: Knap design</h2>
+	</div>
+	<div>
+		<Button>Klik her</Button>
+	</div>
+	</article>
+	<article>
+		<div class="py-8">
+		<h2 class="uppercase font-semibold ">Øvelse 2: Knap design</h2>
+	</div>
+	<div>
+		<div class="py-2">
+			<p>Primary, small</p>
+		<Button2 variant="primary" size="small">Knaptekst</Button2>
+	</div>
+	<div class="py-2">
+		<p>Primary, medium</p>
+		<Button2 variant="primary" size="medium">Knaptekst</Button2>
+	</div>
+	<div class="py-2">
+		<p>Primary, large</p>
+		<Button2 variant="primary" size="large">Knaptekst</Button2>
+	</div>
+	<div class="py-2">
+		<p>Secondary, small</p>
+		<Button2 variant="secondary" size="small">Knaptekst</Button2>
+	</div>
+	</div>
 	</article>
 </MainLayout>
