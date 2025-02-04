@@ -18,9 +18,9 @@ import thumbsup from "../assets/images/thumbsup.png";
 	</article>
 	<article>
 		<div class="py-8">
-		<h2 class="uppercase font-semibold ">Øvelse 2: Knap design</h2>
+		<h2 class="uppercase font-semibold ">Øvelse 2: Knap design med varianter og size</h2>
 	</div>
-	<div>
+	<div class="grid grid-cols-8 gap-2">
 		<div class="py-2">
 			<p>Primary, small</p>
 		<Button2 variant="primary" size="small">Knaptekst</Button2>
@@ -37,6 +37,85 @@ import thumbsup from "../assets/images/thumbsup.png";
 		<p>Secondary, small</p>
 		<Button2 variant="secondary" size="small">Knaptekst</Button2>
 	</div>
+
 	</div>
+	</article>
+	<article>
+		<div class="py-8">
+			<h2 class="uppercase font-semibold ">Øvelse 3: Form</h2>
+		</div>
+	
+				<form method="post" class="[&>div]:py-4 grid grid-cols-4 gap-4 ">
+					<div>
+					<label for="antal" class="text-gray-900">Antal:</label><br>
+					<input type="number" id="antal" name="antal" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder=""><br>
+				</div>
+				<div class="grid grid-cols-2">
+					<label for="levering">Levering:</label><br>
+					<div>
+					<input type="radio" id="radio" name="radio" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50" checked="">Postnord<br>
+				</div>
+				<div>
+					<input type="radio" id="radio" name="radio" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50" checked="">Hent selv<br>
+				</div>
+				</div>
+				<div>
+					<label for="name">Navn:</label><br>
+					<input type="text" id="fname" name="fname" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder=""><br>
+				</div>
+				<div>
+					<label for="address">Adresse:</label><br>
+					<input type="text" id="address" name="address" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder=""><br>
+				</div>
+				<div>
+					<label for="email">Email:</label><br>
+					<input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="juliebech@example.com"><br>
+				</div>
+				<div>
+					<label for="postnummer">Postnummer:</label><br>
+					<input type="text" id="postnummer" name="postnummer" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder=""><br>
+				</div>
+				<div>
+					<label for="bynavn">Bynavn:</label><br>
+					<input type="text" id="bynavn" name="bynavn" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder=""><br>
+				</div>
+				<div>
+					<label for="tel">Telefonnummer:</label><br>
+					<input type="tel" id="tel" name="tel" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder=""><br>
+				</div>
+				<div>
+					<label for="checkbox">Nyhedsbrev</label><br>
+					<input type="checkbox" id="checkbox" name="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50" checked="">Ja tak!<br>
+					<input type="checkbox" id="checkbox" name="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50" checked="">Ellers tak!<br>
+				</div>
+					<div>
+						<Button2 variant="primary" size="large">Submit</Button2>
+					</div>
+				  </form>
+	</article>
+	<article>
+		<div class="py-8">
+			<h2 class="uppercase font-semibold ">Øvelse 5: Link design med Astro og Tailwind</h2>
+		</div>
+		<section class="grid grid-cols-6 py-8">
+<div>
+	<p><Link href="" target="_blank" variant="primary" size="small">Anden side</Link></p>
+</div>
+<div>
+	<p><Link href="" target="_blank" variant="primary" size="medium">Anden side</Link></p>
+</div>
+<div>
+	<p><Link href="" target="_blank" variant="primary" size="large">Anden side</Link></p>
+</div>
+<div>
+	<p><Link href="" target="_blank" variant="secondary" size="small">Anden side</Link></p>
+</div>
+<div>
+	<p><Link href="" target="_blank" variant="secondary" size="medium">Anden side</Link></p>
+</div>
+<div>
+	<p><Link href="" target="_blank" variant="secondary" size="large">Anden side</Link></p>
+</div>
+</section>
 	</article>
 </MainLayout>
