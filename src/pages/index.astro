@@ -6,14 +6,15 @@ import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
-<MainLayout title="Titel">
 
+
+<MainLayout title="Titel">
 <main class="px-5">
-<section class="pt-4">
-    <div>
-        <img src="https://i.imgur.com/6UT0v6w.jpeg" alt="Herosection">
+<section class="pt-4 grid gap-8 md:grid-cols-2">
+<div class=" w-full">
+    <img class="" src="https://i.imgur.com/6UT0v6w.jpeg" alt="Herosection">
 </div>
-    <div class="pt-4">
+<div class="pt-4">
         <h1 class="text-2xl font-bold">Københavnerbilleder - en guide til hipster foto</h1>
         <h2 class="font-semibold italic">af Sten Simons</h2>
         <p class="pt-4">Københavnerbilleder er de danske streetfotografers bibel:
@@ -21,17 +22,24 @@ import thumbsup from "../assets/images/thumbsup.png";
              Bogen gennemgår alle væsentlige aspekter af streetfotografering 
             fra grundlæggende teknik til kreative eksperimenter. 
             Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
-				<form class="pt-4" method="post">
+            <section class=" grid gap-4 md:grid-cols-2 items-center">
+                <div>
+			<form class="pt-4" method="post">
                 <input type="email" id="email" name="email" 
                 class="mt-1 block w-full rounded-md border-gray-300 
                 shadow-sm focus:border-indigo-300 focus:ring 
                 focus:ring-indigo-200 focus:ring-opacity-50" placeholder="E-mail"><br>
+            </form>
+            </div>
+            <div>
                 <Button2>Hent prøvekapitel</Button2>
-			</form>
-    </div>
+            </div>
+        </section>
+</div>
 </section>
-<section class="pt-6">
-    <div class="pt-4">
+<section class="">
+<section class=" grid gap-4 md:grid-cols-2 mx-auto max-w-2xl">
+    <div class="pt-4 md:text-right">
         <p>
             Københavnerbilleder er de danske streetfotografers bibel: 
             Det er en fusion mellem et kunstværk og en lærebog. 
@@ -40,7 +48,7 @@ import thumbsup from "../assets/images/thumbsup.png";
             Alt sammen krydret med masser af inspirerende fotos. God læselyst!   
         </p>
     </div>
-    <div class="pt-4">
+    <div class="pt-4 md:text-left">
     <p>Titel: Københavnerbilleder - en guide til hipster foto</p>
         <p>Forfatter: Sten Simons</p>
         <p>Antal sider: 344</p>
@@ -49,19 +57,20 @@ import thumbsup from "../assets/images/thumbsup.png";
         <p>Pris: 399.-</p>
     </div>
 </section>
-<section class="pt-6">
-    <div class="pb-4">
+<section class="pt-6 grid gap-4 md:grid-cols-3 mx-auto max-w-5xl">
+    <div class="pb-4 flex flex-col justify-start border-black border-2">
         <img src="https://i.imgur.com/JI5eMnn.jpeg" alt="åben_bog">
     </div>
-    <div class="pb-4">
+    <div class="pb-4 flex flex-col justify-start border-black border-2">
         <img src="https://i.imgur.com/7mnkHMq.jpeg" alt="lukket_bog">
     </div>
-    <div class="pb-4">
+    <div class="pb-4 flex flex-col justify-start border-black border-2">
         <img src="https://i.imgur.com/Jm2yl0J.jpeg" alt="Åben_bog2">
     </div>
 </section>
 <section class="pt-6">
-    <h1 class="text-2xl font-bold">Bogens kapitler</h1>
+    <h1 class="text-2xl font-bold mx-auto max-w-5xl">Bogens kapitler</h1>
+    <section class="pt-4 grid gap-4 md:grid-cols-2 mx-auto max-w-5xl">
     <div>
         <h2 class="pt-4 text-lg font-semibold">Kapitel 1 - Intro til street foto</h2>
         <p>Hvad er street foto? Det handler i bund og grund om at skyde byens liv 
@@ -94,8 +103,10 @@ import thumbsup from "../assets/images/thumbsup.png";
         <p>Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…</p>
     </div>
 </section>
+</section>
 <section class="pt-6">
-    <h1 class="text-2xl font-bold">Anmeldelser af bogen</h1>
+    <h1 class="text-2xl font-bold mx-auto max-w-5xl">Anmeldelser af bogen</h1>
+    <section class="pt-4 grid gap-10 md:grid-cols-3 mx-auto max-w-5xl">
     <div class="pt-4">
         <section class="grid grid-cols-12">
         <div>
@@ -113,11 +124,11 @@ import thumbsup from "../assets/images/thumbsup.png";
     <div>
         <img src="https://i.imgur.com/Y7x2DfW.jpeg" alt="stjerner">
     </div>
-</section>
-        <p>Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
+</section >
+        <p class="pt-4">Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
         <p class="italic">- Hanne Hovgaard, Berlingeren</p>
     </div>
-    <div class="pt-4">
+    <div class="pt-2">
         <section class="grid grid-cols-12">
             <div>
             <img src="https://i.imgur.com/Y7x2DfW.jpeg" alt="stjerner">
@@ -132,7 +143,7 @@ import thumbsup from "../assets/images/thumbsup.png";
             <img src="https://i.imgur.com/Y7x2DfW.jpeg" alt="stjerner">
         </div>
     </section>
-        <p>Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?</p>
+        <p class="pt-2">Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?</p>
         <p class="italic">- Kim Kloggaard, Fotojournalen.dk</p>
     </div>
     <div class="pt-4">
@@ -156,13 +167,17 @@ import thumbsup from "../assets/images/thumbsup.png";
             <img src="https://i.imgur.com/Y7x2DfW.jpeg" alt="stjerner">
         </div>
     </section>
-        <p>Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
+        <p class="pt-2">Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
         <p class="italic">- Volmer Hansen, Lukkertiden.dk</p>
     </div>
 </section>
+</section>
+</section>
 <section>
     <section class="pt-6">
-        <h1 class="text-2xl font-bold">Billeder fra bogen</h1>
+        <h1 class="text-2xl font-bold mx-auto max-w-5xl">Billeder fra bogen</h1>
+        <section></section>
+        <section class="pt-4 grid gap-4 md:grid-cols-4 mx-auto max-w-5xl">
     <div class="py-4">
         <img src="https://i.imgur.com/MmyRDrp.jpeg" alt="p">
     </div>
@@ -176,7 +191,8 @@ import thumbsup from "../assets/images/thumbsup.png";
         <img src="https://i.imgur.com/u0ncnX5.jpeg" alt="p">
     </div>
 </section>
-<section>
+</section>
+<section class="pt-4 grid gap-4 md:grid-cols-4 mx-auto max-w-5xl">
     <div class="pb-4">
         <img src="https://i.imgur.com/NU4DhDQ.jpeg" alt="p">
     </div>
@@ -184,13 +200,13 @@ import thumbsup from "../assets/images/thumbsup.png";
         <img src="https://i.imgur.com/TjVSrAY.jpeg" alt="p">
     </div>
     <div class="pb-4">
-        <img src="https://i.imgur.com/o2jHIQM.jpeg" alt="p">
+        <img src="https://i.imgur.com/5B20Bti.jpeg" alt="p">
     </div>
     <div class="pb-4">
         <img src="https://i.imgur.com/gIYMVXM.jpeg" alt="p">
     </div>
 </section>
-<section>
+<section class="pt-4 grid gap-4 md:grid-cols-4 mx-auto max-w-5xl">
     <div class="pb-4">
         <img src="https://i.imgur.com/LCpLcfa.jpeg" alt="p">
     </div>
@@ -198,36 +214,36 @@ import thumbsup from "../assets/images/thumbsup.png";
         <img src="https://i.imgur.com/NmINMHP.jpeg" alt="p">
     </div>
     <div class="pb-4">
-        <img src="https://i.imgur.com/5B20Bti.jpeg" alt="p">
+        <img src="https://i.imgur.com/jqEazN7.jpeg" alt="p">
     </div>
     <div class="pb-4">
         <img src="https://i.imgur.com/rwBcj6q.jpeg" alt="p">
     </div>
 </section>
 </section>
-<section class="pt-6">
+<section class="pt-6 grid gap-8 md:grid-cols-2 mx-auto max-w-3xl">
     <div>
-        <h1 class="text-2xl font-bold">Forfatteren</h1>
         <img class="pt-4" src="https://i.imgur.com/ztaP7Sq.jpeg" alt="forfatteren">
     </div>
     <div class="pt-4">
-        <p>Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
+        <h1 class="text-2xl font-bold">Forfatteren</h1>
+        <p class="pt-4">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
             Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
     </div>
 </section>
 <section class="pt-6">
-    <h1 class="text-2xl font-bold">Køb Københavnerbilleder nu</h1>
-    <form method="post" class="pt-4">
-        <div class="grid grid-cols-3 gap-">
+    <h1 class="text-2xl font-bold mx-auto max-w-3xl">Køb Københavnerbilleder nu</h1>
+    <section class="pt-4 mx-auto max-w-md">
+    <form method="post">
+        <div class="grid grid-cols-5">
+            <div>
+            <label for="antal" class="text-gray-900 pb-5">Levering</label><br>
+        </div>
         <div>
-        <label for="antal" class="text-gray-900">Antal:</label><br>
+            <input type="number" id="antal" name="antal" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"><br>
+        </div>
     </div>
-        <div>
-        <input type="number" id="antal" name="antal" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"><br>
-    </div>
-</div>
-    <div class="grid grid-cols-2">
-        <label for="antal" class="text-gray-900 pb-5">Levering</label><br>
+    <div class="grid grid-cols-5">
         <div>
         <input type="radio" id="radio" name="radio" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50" checked="">PostDK<br>
     </div>
@@ -244,23 +260,27 @@ import thumbsup from "../assets/images/thumbsup.png";
     <div>
         <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="E-mail"><br>
     </div>
+    <section class="grid grid-cols-2 gap-2">
     <div>
         <input type="text" id="postnummer" name="postnummer" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Postnr."><br>
     </div>
     <div>
         <input type="text" id="bynavn" name="bynavn" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="By"><br>
     </div>
+</section>
     <div>
         <input type="tel" id="tel" name="tel" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Tlf.nr."><br>
     </div>
-    <div class="pb-4">
+    <div class="pb-4 grid grid-cols-2">
+        <div>
         <input type="checkbox" id="checkbox" name="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50" checked="">Jeg vil gerne tilmedles nyhedsmail<br>
     </div>
-        <div>
-            <Button2>Fortsæt</Button2>
+        <div class="text-right">
+            <Button2 class="ml-auto bg-blue-500 text-white px-4 py-2">Fortsæt</Button2>
         </div>
+    </div>
       </form>
-
+    </section>
 </section>
 </main>
 </MainLayout>
