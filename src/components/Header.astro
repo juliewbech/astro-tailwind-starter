@@ -4,17 +4,19 @@ import Link from '../components/Link.astro';
 ---
 
 
-<div x-data="{ showmenu: false}" class="p-4  lg:static w-full bg-slate-200">
+<div x-data="{ showmenu: false}" class="p-4  lg:static w-full">
     <div id="navbar" class="flex flex-row justify-between">
         <div id="logo" class="">
-            <a href="#link1">Site logo</a>
+            <a href="#">
+                <img src=".../favicon.svg" alt="Logo">
+            </a>
         </div>
         <nav id="desktopmenu" class="hidden lg:block">
             <ul class="flex flex-row gap-4">
-                <li class=""><Link href="#">Link 1</Link></li>
-                <li class=""><Link href="#">Link 2</Link></li>
-                <li class=""><Link href="#">Link 3</Link></li>
-                <li class=""><Link href="#">Link 4</Link></li>
+                <li class=""><Link href="#" variant="secondary" size="large">Link 1</Link></li>
+                <li class=""><Link href="#" variant="secondary" size="large">Link 2</Link></li>
+                <li class=""><Link href="#" variant="secondary" size="large">Link 3</Link></li>
+                <li class=""><Link href="#" variant="secondary" size="large">Link 4</Link></li>
             </ul>
         </nav>
         <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
