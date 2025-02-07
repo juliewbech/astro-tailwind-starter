@@ -42,7 +42,7 @@
 }
 
 .titleentranceleft {
-  animation: slideInLeft 1s ease-out;
+  animation: slideInLeft 1.5s ease-out;
 }
 
 .starentrance {
@@ -50,5 +50,5 @@
 }
 
 .pictureentrance {
-  animation: fadeInUp 1s ease-out;
+  animation: fadeInUp 2s ease-out;
 }
