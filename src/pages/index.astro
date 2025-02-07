@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import tailwind from "../styles/tailwind.css";
 import Button from '../components/Button.astro';
 import Button2 from '../components/Button2.astro';
 import Link from '../components/Link.astro';
@@ -8,6 +9,39 @@ import thumbsup from "../assets/images/thumbsup.png";
 ---
 
 
+
+  <script>
+   import { inView } from "motion";
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".titelentranceright").forEach((element) => {
+        inView(element, () => {
+            element.classList.add("animate_animated", "animate_slideInRight");
+        });
+    });
+
+    document.querySelectorAll(".titelentranceleft").forEach((element) => {
+        inView(element, () => {
+            element.classList.add("animate_animated", "animate_slideInLeft");
+        });
+    });
+
+    document.querySelectorAll(".starentrance").forEach((element) => {
+        inView(element, () => {
+            element.classList.add("animate_animated", "animate_slideInDown");
+        });
+    });
+
+    document.querySelectorAll(".pictureentrance").forEach((element) => {
+        inView(element, () => {
+            element.classList.add("animate_animated", "animate_fadeInUp");
+        });
+    });
+});
+
+  </script>
+  
+
 <MainLayout title="Titel">
 <main class="px-5">
 <section class="pt-4 grid gap-8 md:grid-cols-2">
@@ -15,8 +49,8 @@ import thumbsup from "../assets/images/thumbsup.png";
     <img class="" src="https://i.imgur.com/6UT0v6w.jpeg" alt="Herosection">
 </div>
 <div class="pt-4">
-        <h1 class="text-2xl font-bold animate__animated animate__slideInRight md:text-5xl">Københavnerbilleder</h1>
-        <h1 class="text-2xl font-bold animate__animated animate__slideInRight md:text-5xl">- en guide til hipster foto</h1>
+        <h1 class="text-2xl titleentranceright font-bold md:text-5xl">Københavnerbilleder</h1>
+        <h1 class="text-2xl titleentranceright font-bold md:text-5xl">- en guide til hipster foto</h1>
         <h2 class="font-semibold italic md:pt-4 md:text-2xl">af Sten Simons</h2>
         <p class="pt-4">Københavnerbilleder er de danske streetfotografers bibel:
              Det er en fusion mellem et kunstværk og en lærebog. 
@@ -72,7 +106,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 </section>
 </section>
 <section class="pt-6">
-    <h1 class="text-2xl font-bold mx-auto max-w-5xl animate__animated animate__slideInLeft">Bogens kapitler</h1>
+    <h1 class="text-2xl font-bold mx-auto max-w-5xl titleentranceleft">Bogens kapitler</h1>
     <section class="pt-4 grid gap-4 md:grid-cols-2 mx-auto max-w-5xl">
     <div>
         <h2 class="pt-4 text-lg font-semibold">Kapitel 1 - Intro til street foto</h2>
@@ -108,10 +142,10 @@ import thumbsup from "../assets/images/thumbsup.png";
 </section>
 </section>
 <section class="pt-6">
-    <h1 class="text-2xl font-bold mx-auto max-w-5xl">Anmeldelser af bogen</h1>
+    <h1 class="text-2xl font-bold mx-auto max-w-5xl titleentranceleft">Anmeldelser af bogen</h1>
     <section class="pt-4 grid gap-10 md:grid-cols-3 mx-auto max-w-5xl">
     <div class="pt-4">
-        <section class="grid grid-cols-12 animate__animated animate__slideInDown">
+        <section class="grid grid-cols-12 starentrance">
         <div class="animate-wiggle">
         <img src="https://i.imgur.com/Y7x2DfW.jpeg" alt="stjerner">
     </div>
@@ -132,7 +166,7 @@ import thumbsup from "../assets/images/thumbsup.png";
         <p class="italic">- Hanne Hovgaard, Berlingeren</p>
     </div>
     <div class="pt-2">
-        <section class="grid grid-cols-12 animate__animated animate__slideInDown">
+        <section class="grid grid-cols-12 starentrance">
             <div class="animate-wiggle">
             <img src="https://i.imgur.com/Y7x2DfW.jpeg" alt="stjerner">
         </div>
@@ -150,7 +184,7 @@ import thumbsup from "../assets/images/thumbsup.png";
         <p class="italic">- Kim Kloggaard, Fotojournalen.dk</p>
     </div>
     <div class="pt-4">
-        <section class="grid grid-cols-12 animate__animated animate__slideInDown">
+        <section class="grid grid-cols-12 starentrance">
             <div class="animate-wiggle">
             <img src="https://i.imgur.com/Y7x2DfW.jpeg" alt="stjerner">
         </div>
@@ -178,53 +212,52 @@ import thumbsup from "../assets/images/thumbsup.png";
 </section>
 <section>
     <section class="pt-6">
-        <h1 class="text-2xl font-bold mx-auto max-w-5xl animate__animated animate__slideInLeft">Billeder fra bogen</h1>
-        <section></section>
-        <section class="pt-4 grid gap-4 md:grid-cols-4 mx-auto max-w-5xl">
-    <div class="py-4 animate__animated animate__fadeInUp">
+        <h1 class="text-2xl font-bold mx-auto max-w-5xl titleentranceleft">Billeder fra bogen</h1>
+        <section class="pt-4 grid gap-4 md:grid-cols-4 mx-auto max-w-5xl  pictureentrance">
+    <div class="py-4">
         <img src="https://i.imgur.com/MmyRDrp.jpeg" alt="p">
     </div>
-    <div class="pb-4 animate__animated animate__fadeInUp">
+    <div class="pb-4">
         <img src="https://i.imgur.com/GwIPIri.jpeg" alt="p">
     </div>
-    <div class="pb-4 animate__animated animate__fadeInUp">
+    <div class="pb-4">
         <img src="https://i.imgur.com/kpcXrhV.jpeg" alt="p">
-    </div>
-    <div class="pb-4 animate__animated animate__fadeInUp">
+    </div> 
+    <div class="pb-4">
         <img src="https://i.imgur.com/u0ncnX5.jpeg" alt="p">
     </div>
 </section>
 </section>
-<section class="pt-4 grid gap-4 md:grid-cols-4 mx-auto max-w-5xl">
-    <div class="pb-4 animate__animated animate__fadeInUp">
+<section class="pt-4 grid gap-4 md:grid-cols-4 mx-auto max-w-5xl pictureentrance">
+    <div class="pb-4">
         <img src="https://i.imgur.com/NU4DhDQ.jpeg" alt="p">
     </div>
-    <div class="pb-4 animate__animated animate__fadeInUp">
+    <div class="pb-4">
         <img src="https://i.imgur.com/TjVSrAY.jpeg" alt="p">
     </div>
-    <div class="pb-4 animate__animated animate__fadeInUp">
+    <div class="pb-4">
         <img src="https://i.imgur.com/5B20Bti.jpeg" alt="p">
     </div>
-    <div class="pb-4 animate__animated animate__fadeInUp">
+    <div class="pb-4">
         <img src="https://i.imgur.com/gIYMVXM.jpeg" alt="p">
     </div>
 </section>
-<section class="pt-4 grid gap-4 md:grid-cols-4 mx-auto max-w-5xl ">
-    <div class="pb-4 animate__animated animate__fadeInUp">
+<section class="pt-4 grid gap-4 md:grid-cols-4 mx-auto max-w-5xl pictureentrance">
+    <div class="pb-4">
         <img src="https://i.imgur.com/LCpLcfa.jpeg" alt="p">
     </div>
-    <div class="pb-4 animate__animated animate__fadeInUp">
+    <div class="pb-4">
         <img src="https://i.imgur.com/NmINMHP.jpeg" alt="p">
     </div>
-    <div class="pb-4 animate__animated animate__fadeInUp">
+    <div class="pb-4">
         <img src="https://i.imgur.com/jqEazN7.jpeg" alt="p">
     </div>
-    <div class="pb-4 animate__animated animate__fadeInUp">
+    <div class="pb-4">
         <img src="https://i.imgur.com/rwBcj6q.jpeg" alt="p">
     </div>
 </section>
 </section>
-<section class="pt-6 grid gap-8 md:grid-cols-2 mx-auto max-w-3xl">
+<section class="pt-6 grid gap-8 md:grid-cols-2 mx-auto max-w-3xl pictureentrance">
     <div>
         <img class="pt-4" src="https://i.imgur.com/ztaP7Sq.jpeg" alt="forfatteren">
     </div>
@@ -234,7 +267,7 @@ import thumbsup from "../assets/images/thumbsup.png";
             Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
     </div>
 </section>
-<section class="pt-6">
+<section class="pt-6 pictureentrance">
     <h1 class="text-2xl font-bold mx-auto max-w-3xl">Køb Københavnerbilleder nu</h1>
     <section class="pt-4 mx-auto max-w-md">
     <form method="post" class="border-red-800 border-2 p-8">

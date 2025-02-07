@@ -36,3 +36,19 @@
 }
 @layer utilities {
 }
+
+.titleentranceright {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.titleentranceleft {
+  animation: slideInLeft 1s ease-out;
+}
+
+.starentrance {
+  animation: slideInDown 1s ease-out;
+}
+
+.pictureentrance {
+  animation: fadeInUp 1s ease-out;
+}
