@@ -13,10 +13,10 @@ import Link from '../components/Link.astro';
         </div>
         <nav id="desktopmenu" class="hidden lg:block">
             <ul class="flex flex-row gap-8">
-                <li class=""><Link href="#" variant="secondary" size="large">Bogens kapitler</Link></li>
-                <li class=""><Link href="#" variant="secondary" size="large">Anmeldelser af bogen</Link></li>
-                <li class=""><Link href="#" variant="secondary" size="large">Billeder fra bogen</Link></li>
-                <li class=""><Link href="#" variant="secondary" size="large">Forfatteren</Link></li>
+                <li class=""><Link href="#kapitler" variant="secondary" size="large">Bogens kapitler</Link></li>
+                <li class=""><Link href="#anmeldelser" variant="secondary" size="large">Anmeldelser af bogen</Link></li>
+                <li class=""><Link href="#billeder" variant="secondary" size="large">Billeder fra bogen</Link></li>
+                <li class=""><Link href="#forfatteren" variant="secondary" size="large">Forfatteren</Link></li>
                 <li><a href="#"><img src="https://i.imgur.com/pYpfAk3.jpeg" alt=""></a></li>
             </ul>
         </nav>
@@ -25,10 +25,10 @@ import Link from '../components/Link.astro';
     <nav id="mobilmenu" class="flex flex-col content-center pt-4" 
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul>
-        <li class="text-center py-2 border-y-2"><Link href="#" variant="secondary" size="large">Bogens kapitler</Link></li>
-        <li class="text-center py-2 border-y-2"><Link href="#" variant="secondary" size="large">Anmeldelser af bogen</Link></li>
-        <li class="text-center py-2 border-y-2"><Link href="#" variant="secondary" size="large">Billeder fra bogen</Link></li>
-        <li class="text-center py-2 border-y-2"><Link href="#" variant="secondary" size="large">Forfatteren</Link></li>
+        <li class="text-center py-2 border-y-2"><Link href="#kapitler" variant="secondary" size="large">Bogens kapitler</Link></li>
+        <li class="text-center py-2 border-y-2"><Link href="#anmeldelser" variant="secondary" size="large">Anmeldelser af bogen</Link></li>
+        <li class="text-center py-2 border-y-2"><Link href="#billeder" variant="secondary" size="large">Billeder fra bogen</Link></li>
+        <li class="text-center py-2 border-y-2"><Link href="#forfatteren" variant="secondary" size="large">Forfatteren</Link></li>
     </ul>
 </nav>
 </div>
